@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.scss';
 import Homepage from './components/Homepage';
 import Fourofour from './components/404';
-import Footer from './components/footer';
+import Redirect from './components/redirect';
 
 function App(): JSX.Element {
   return (
@@ -13,6 +13,9 @@ function App(): JSX.Element {
         <Switch>
           <Route exact path="/">
             <Homepage />
+          </Route>
+          <Route exact path="/:code">
+            <Redirect />
           </Route>
           <Route exact path="*">
             <Fourofour />
