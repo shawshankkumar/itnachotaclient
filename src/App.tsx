@@ -1,24 +1,24 @@
 import React from 'react';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.scss';
+import Homepage from './components/Homepage';
+import Fourofour from './components/404';
+import Footer from './components/footer';
 
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Bootstrapped using <code>Springboard</code>
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/srm-kzilla/springboard"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Star the repo. Show the love.
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route exact path="*">
+            <Fourofour />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
