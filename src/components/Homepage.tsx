@@ -39,7 +39,7 @@ const Homepage = (): JSX.Element => {
   };
   return (
     <div>
-      <div className="bg-black bg-gradient-to-t from-black via-gray-400	to-gray-50	min-h-screen flex flex-col justify-center">
+      <div className="bg-black bg-gradient-to-t from-black via-gray-400	to-white	min-h-screen flex flex-col justify-center">
         <div className="container mx-auto my-20 w-1/2 border border-none bg-transparent ">
           <div className="p-8 space-y-10 shadow-2xl ">
             <form
