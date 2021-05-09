@@ -5,6 +5,7 @@ import './App.scss';
 import Homepage from './components/Homepage';
 import Fourofour from './components/404';
 import Redirect from './components/redirect';
+import Footer from './components/footer';
 
 function App(): JSX.Element {
   return (

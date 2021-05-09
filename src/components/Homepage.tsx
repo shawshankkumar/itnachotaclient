@@ -8,8 +8,10 @@ const Homepage = (): JSX.Element => {
       <div>
         <h1>Hello ma!</h1>
       </div>
-      <div className="bg-black">
-        <Footer />
+      <div>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </div>
   );
