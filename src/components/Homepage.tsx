@@ -39,7 +39,21 @@ const Homepage = (): JSX.Element => {
   };
   return (
     <div>
-      <div className="bg-black bg-gradient-to-t from-black via-gray-400	to-white	min-h-screen flex flex-col justify-center">
+      <div className="bg-black bg-gradient-to-t from-blue-500 via-gray-400	to-gray-50	min-h-screen flex flex-col justify-center">
+        {/* <div className="absolute top-5 right-10">
+          <button type="button" className="bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="https://github.com" target="_blank" rel="noreferrer">
+              itnachota url
+            </a>
+          </button>
+        </div> */}
+        <div className="absolute top-10 left-10">
+          <button type="button" className=" bg-blue-500 hover:bg-red-500 text-white py-2 px-4 rounded">
+            <a href="https://github.com" target="_blank" rel="noreferrer">
+              <div className="font-mono font-extrabold inline">itnachota</div>
+            </a>
+          </button>
+        </div>
         <div className="container mx-auto my-20 w-1/2 border border-none bg-transparent ">
           <div className="p-8 space-y-10 shadow-2xl ">
             <form
