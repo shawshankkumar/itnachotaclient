@@ -13,7 +13,7 @@ const Homepage = (): JSX.Element => {
   const [value, setValue] = React.useState('');
   const [url, setUrl] = React.useState('https://itnachota.vercel.app/');
   const [message, setMessage] = React.useState('');
-  const [button, setButton] = React.useState('itnachotas');
+  const [button, setButton] = React.useState('itnachota');
 
   const onSubmitHandler = () => {
     setValue('Waving my wand to make this url shorter...');
@@ -40,7 +40,7 @@ const Homepage = (): JSX.Element => {
   return (
     <div>
       <div className="bg-black bg-gradient-to-t from-black via-gray-400	to-gray-50	min-h-screen flex flex-col justify-center">
-        <div className="container mx-auto my-20 w-1/3 border border-none bg-transparent ">
+        <div className="container mx-auto my-20 w-1/2 border border-none bg-transparent ">
           <div className="p-8 space-y-10 shadow-2xl ">
             <form
               onMouseEnter={() => {
