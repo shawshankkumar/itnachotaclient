@@ -8,22 +8,22 @@ import Footer from './footer';
 const Homepage = (): JSX.Element => {
   const formText = 'phalanadhimka.com/whyisthisurlsolong?';
   const texts = 'ss';
-  const api = 'http://localhost:4000/api/create/link';
+  const api = 'https://itnachota.herokuapp.com/api/create/link';
   const [text, setText] = React.useState(formText);
   const [value, setValue] = React.useState('');
-  const [url, setUrl] = React.useState('localhost:3000/');
+  const [url, setUrl] = React.useState('https://itnachota.vercel.app/');
   const [message, setMessage] = React.useState('');
   const [button, setButton] = React.useState('itnachotas');
 
   const onSubmitHandler = () => {
     setValue('Waving my wand to make this url shorter...');
-    const urlRegex = new RegExp(/(localhost)/);
+    const urlRegex = new RegExp(/(itnachota.vercel.app)/);
     console.log(urlRegex.test(url));
     if (!urlRegex.test(url))
       axios
         .post(api, { link: url })
         .then(code => {
-          const link = `localhost:3000/${code.data.code}`;
+          const link = `itnachota.vercel.app/${code.data.code}`;
           setValue(link);
           setMessage('🎊 Your itnachota url is here! 🎊');
           setUrl(link);
@@ -39,7 +39,7 @@ const Homepage = (): JSX.Element => {
   };
   return (
     <div>
-      <div className="bg-black bg-gradient-to-t from-black via-gray-500	to-gray-200	min-h-screen flex flex-col justify-center">
+      <div className="bg-black bg-gradient-to-t from-black via-gray-400	to-gray-50	min-h-screen flex flex-col justify-center">
         <div className="container mx-auto my-20 w-1/3 border border-none bg-transparent ">
           <div className="p-8 space-y-10 shadow-2xl ">
             <form
