@@ -8,7 +8,7 @@ const Footer = (): JSX.Element => {
   const [text, setText] = React.useState(permanentFooter);
   return (
     <footer>
-      <div className="container w-full bg-none text-mono p-2">
+      <div className="container w-full text-mono p-2 fixed bottom-0 bg-black justify-center items-center text-center">
         <div className="text-white text-center transform hover:-translate-y-1">
           <a href="https://instagram.com/shashankkumarthakur" className="text-x1" target="_blank" rel="noreferrer">
             <FaInstagram className="inline " />
