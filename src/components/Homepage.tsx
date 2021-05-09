@@ -39,7 +39,7 @@ const Homepage = (): JSX.Element => {
   };
   return (
     <div>
-      <div className="bg-black bg-gradient-to-t from-blue-500 via-gray-400	to-gray-50	min-h-screen flex flex-col justify-center">
+      <div className="bg-black bg-gradient-to-t from-blue-500 via-gray-300	to-gray-50	min-h-screen flex flex-col justify-center">
         {/* <div className="absolute top-5 right-10">
           <button type="button" className="bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             <a href="https://github.com" target="_blank" rel="noreferrer">
