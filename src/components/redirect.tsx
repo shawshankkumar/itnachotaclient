@@ -16,7 +16,7 @@ const Redirection = () => {
   const { code } = useParams() as { code: string };
   if (code.length !== 6) return Fourofour();
   if (!code) return Fourofour();
-  const api = `http://localhost:4000/api/fetch/link?code=${code}`;
+  const api = `https://itnachota.herokuapp.com/api/fetch/link?code=${code}`;
   axios
     .get(api)
     .then(data => {
