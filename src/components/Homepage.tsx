@@ -6,7 +6,7 @@ import copy from 'copy-to-clipboard';
 import Footer from './footer';
 
 const Homepage = (): JSX.Element => {
-  const formText = 'phalanadhimka.com/whyisthisurlsolong?';
+  const formText = `phalanadhimka.com/whyisthisurlsolong?solution=useme`;
   const texts = 'ss';
   const api = 'https://itnachota.herokuapp.com/api/create/link';
   const [text, setText] = React.useState(formText);
@@ -39,7 +39,7 @@ const Homepage = (): JSX.Element => {
   };
   return (
     <div>
-      <div className="bg-black bg-gradient-to-t from-blue-600 to-green-100	min-h-screen flex flex-col justify-center">
+      <div className="bg-black bg-gradient-to-br from-blue-600 to-green-100	min-h-screen flex flex-col justify-center">
         {/* <div className="absolute top-5 right-10">
           <button type="button" className="bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             <a href="https://github.com" target="_blank" rel="noreferrer">
