@@ -27,7 +27,7 @@ const Homepage = (): JSX.Element => {
           setValue(link);
           setMessage('🎊 Your itnachota url is here! 🎊');
           setUrl(link);
-          if (copy(link)) setButton('Link copied!🎉');
+          if (copy(link)) setButton('Link copied! 🎉');
         })
         .catch(e => {
           setValue('Oopsie, something went wrong!');
@@ -35,7 +35,7 @@ const Homepage = (): JSX.Element => {
     else {
       setMessage('Woah easy there! ✋ The url is already itnachota, aur kitna chota?');
       setValue(url);
-      if (copy(value)) setButton('Link copied!🎉');
+      if (copy(value)) setButton('Link copied! 🎉');
     }
   };
   return (
