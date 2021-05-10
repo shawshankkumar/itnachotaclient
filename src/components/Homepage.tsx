@@ -16,7 +16,7 @@ const Homepage = (): JSX.Element => {
   const [button, setButton] = React.useState('itnachota');
 
   const onSubmitHandler = () => {
-    setValue('Waving my wand to make this url shorter...');
+    setValue('Waving my Elder wand to make this url shorter...');
     const urlRegex = new RegExp(/(itnachota.vercel.app)/);
     console.log(urlRegex.test(url));
     if (!urlRegex.test(url))
@@ -35,6 +35,7 @@ const Homepage = (): JSX.Element => {
     else {
       setMessage('Woah easy there! ✋ The url is already itnachota, aur kitna chota?');
       setValue(url);
+      if (copy(value)) setButton('Link copied!🎉');
     }
   };
   return (
