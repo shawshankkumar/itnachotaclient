@@ -35,6 +35,7 @@ const Homepage = (): JSX.Element => {
     else {
       setMessage('Woah easy there! ✋ The url is already itnachota, aur kitna chota?');
       setValue(url);
+if (copy(url)) setButton('Link copied!🎉');
     }
   };
   return (
