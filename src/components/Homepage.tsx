@@ -49,8 +49,8 @@ const Homepage = (): JSX.Element => {
           </button>
         </div> */}
         <div className="absolute top-10 left-10">
-          <button type="button" className=" bg-blue-500 hover:bg-red-500 text-white py-2 px-4 rounded">
-            <a href="https://github.com" target="_blank" rel="noreferrer">
+          <button type="button" className=" bg-blue-500 hover:bg-white hover:text-black text-white py-2 px-4 rounded">
+            <a href="https://github.com/shawshankkumar" target="_blank" rel="noreferrer">
               <div className="font-mono font-extrabold inline">itnachota</div>
             </a>
           </button>
