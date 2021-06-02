@@ -11,19 +11,19 @@ const Homepage = (): JSX.Element => {
   const api = 'https://itnachota.herokuapp.com/api/create/link';
   const [text, setText] = React.useState(formText);
   const [value, setValue] = React.useState('');
-  const [url, setUrl] = React.useState('https://itnachota.vercel.app/');
+  const [url, setUrl] = React.useState('https://itnachota.shashankkumar.xyz/');
   const [message, setMessage] = React.useState('');
   const [button, setButton] = React.useState('itnachota');
 
   const onSubmitHandler = () => {
     setValue('Waving my Elder wand to make this url shorter...');
-    const urlRegex = new RegExp(/(itnachota.vercel.app)/);
+    const urlRegex = new RegExp(/(itnachota.shashankkumar.xyz)/);
     console.log(urlRegex.test(url));
     if (!urlRegex.test(url))
       axios
         .post(api, { link: url })
         .then(code => {
-          const link = `itnachota.vercel.app/${code.data.code}`;
+          const link = `itnachota.shashankkumar.xyz/${code.data.code}`;
           setValue(link);
           setMessage('🎊 Your itnachota url is here! 🎊');
           setUrl(link);
