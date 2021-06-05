@@ -50,7 +50,7 @@ const Homepage = (): JSX.Element => {
         </div> */}
         <div className="absolute top-10 left-10">
           <button type="button" className=" bg-blue-500 hover:bg-white hover:text-black text-white py-2 px-4 rounded">
-            <a href="https://itnachota.vercel.app/" rel="noreferrer">
+            <a href="https://itnachota.shashankkumar.xyz/" rel="noreferrer">
               <div className="font-mono font-extrabold inline">itnachota</div>
             </a>
           </button>
