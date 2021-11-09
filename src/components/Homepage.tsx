@@ -2,13 +2,15 @@ import React from 'react';
 import '../index.scss';
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
-
+import { config } from 'dotenv';
 import Footer from './footer';
+
+config();
 
 const Homepage = (): JSX.Element => {
   const formText = `phalanadhimka.com/whyisthisurlsolong?solution=useme`;
   const texts = 'ss';
-  const api = 'https://itnachota.herokuapp.com/api/create/link';
+  const api = `${process.env.API_LINK}api/create/link`;
   const [text, setText] = React.useState(formText);
   const [value, setValue] = React.useState('');
   const [url, setUrl] = React.useState('https://itnachota.shashankkumar.xyz/');

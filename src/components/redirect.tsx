@@ -6,8 +6,10 @@ import Fourofour from './404';
 import img1 from './img6.jpg';
 import img2 from './img4.jpg';
 import img3 from './img10.jpg';
+import { config } from 'dotenv';
 import Footer from './footer';
 
+config();
 const Redirection = () => {
   const errorMessage = 'Oops! Something went wrong. We have sent a letter to 221B Baker Street.';
   const fetchingMEssage = 'Let me wave my elder wand and redirect you to your url!';
@@ -16,7 +18,7 @@ const Redirection = () => {
   const { code } = useParams() as { code: string };
   if (code.length !== 6) return Fourofour();
   if (!code) return Fourofour();
-  const api = `https://itnachota.herokuapp.com/api/fetch/link?code=${code}`;
+  const api = `${process.env.API_LINK}api/fetch/link?code=${code}`;
   axios
     .get(api)
     .then(data => {
