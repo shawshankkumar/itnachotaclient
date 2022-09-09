@@ -20,8 +20,7 @@ const Homepage = (): JSX.Element => {
 
   const onSubmitHandler = () => {
     setValue('Waving my Elder wand to make this url shorter...');
-    const expression_regex="/"+PUBLIC_URL+"/";
-    const urlRegex = new RegExp(expression_regex);
+    const urlRegex = new RegExp(/itnachota/);
     console.log(urlRegex.test(url));
     if (!urlRegex.test(url))
       axios
