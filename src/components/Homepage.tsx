@@ -13,19 +13,21 @@ const Homepage = (): JSX.Element => {
   const api = `${process.env.API_LINK}api/create/link`;
   const [text, setText] = React.useState(formText);
   const [value, setValue] = React.useState('');
-  const [url, setUrl] = React.useState('https://itnachota.shashankkumar.xyz/');
+  const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
+  const [url, setUrl] = React.useState(process.env.REACT_APP_PUBLIC_URL);
   const [message, setMessage] = React.useState('');
   const [button, setButton] = React.useState('itnachota');
 
   const onSubmitHandler = () => {
     setValue('Waving my Elder wand to make this url shorter...');
-    const urlRegex = new RegExp(/(itnachota.shashankkumar.xyz)/);
+    const expression_regex="/"+PUBLIC_URL+"/";
+    const urlRegex = new RegExp(expression_regex);
     console.log(urlRegex.test(url));
     if (!urlRegex.test(url))
       axios
         .post(api, { link: url })
         .then(code => {
-          const link = `itnachota.shashankkumar.xyz/${code.data.code}`;
+          const link = `${PUBLIC_URL}${code.data.code}`;
           setValue(link);
           setMessage('🎊 Your itnachota url is here! 🎊');
           setUrl(link);
@@ -52,7 +54,7 @@ const Homepage = (): JSX.Element => {
         </div> */}
         <div className="absolute top-10 left-10">
           <button type="button" className=" bg-blue-500 hover:bg-white hover:text-black text-white py-2 px-4 rounded">
-            <a href="https://itnachota.shashankkumar.xyz/" rel="noreferrer">
+            <a href={PUBLIC_URL} rel="noreferrer">
               <div className="font-mono font-extrabold inline">itnachota</div>
             </a>
           </button>
